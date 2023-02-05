@@ -4,6 +4,8 @@ public enum Tipo {
 	
 	LATA,
 	SEISSENTOS,
+	LITRO,
+	LITRO_MEIO,
 	JARRA_GRANDE,
 	JARRA_PEQUENA;
 	

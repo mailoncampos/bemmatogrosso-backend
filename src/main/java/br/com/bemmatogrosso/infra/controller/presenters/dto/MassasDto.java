@@ -5,7 +5,7 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.bemmatogrosso.usercase.cardapio.massas.MassasInputDto;
+import br.com.bemmatogrosso.usercase.cardapio.massas.dto.MassasInputDto;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

@@ -12,6 +12,8 @@ import br.com.bemmatogrosso.domain.model.cardapio.massas.Massas;
 import br.com.bemmatogrosso.domain.model.cardapio.massas.MassasRespository;
 import br.com.bemmatogrosso.domain.model.cardapio.massas.Molho;
 import br.com.bemmatogrosso.domain.model.cardapio.massas.Tempero;
+import br.com.bemmatogrosso.usercase.cardapio.massas.dto.MassasInputDto;
+import br.com.bemmatogrosso.usercase.cardapio.massas.dto.MassasOutputDto;
 
 @Service
 public class CriarMassasUserCase {

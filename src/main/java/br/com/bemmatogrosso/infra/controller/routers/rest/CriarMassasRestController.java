@@ -13,7 +13,7 @@ import br.com.bemmatogrosso.usercase.cardapio.massas.CriarMassasUserCase;
 
 @RestController
 @RequestMapping("/massas")
-public class CriarMassasRest {
+public class CriarMassasRestController {
 	
 	@Autowired
 	private CriarMassasUserCase criarMassasUserCase;

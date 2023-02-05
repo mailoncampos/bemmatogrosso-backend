@@ -1,4 +1,4 @@
-package br.com.bemmatogrosso.usercase.cardapio.massas;
+package br.com.bemmatogrosso.usercase.cardapio.massas.dto;
 
 import java.math.BigDecimal;
 import java.time.Duration;

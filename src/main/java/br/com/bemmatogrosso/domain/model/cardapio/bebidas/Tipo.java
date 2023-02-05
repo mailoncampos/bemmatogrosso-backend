@@ -1,13 +1,15 @@
 package br.com.bemmatogrosso.domain.model.cardapio.bebidas;
 
-public enum Tipo {
-	
-	LATA,
-	SEISSENTOS,
-	LITRO,
-	LITRO_MEIO,
-	JARRA_GRANDE,
-	JARRA_PEQUENA;
-	
+import br.com.bemmatogrosso.domain.model.cardapio.vo.Nome;
+import lombok.Getter;
+
+@Getter
+public class Tipo {
+
+	private Nome nome;
+
+	public Tipo(String nome) {
+		this.nome = new Nome(nome);
+	}
 
 }

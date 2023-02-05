@@ -1,20 +1,26 @@
 package br.com.bemmatogrosso.infra.controller.routers.rest;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.bemmatogrosso.infra.controller.presenters.request.CriarMassasDto;
+import br.com.bemmatogrosso.usercase.cardapio.massas.CriarMassasUserCase;
 
 @RestController
 @RequestMapping("/massas")
 public class CriarMassasRest {
+	
+	@Autowired
+	private CriarMassasUserCase criarMassasUserCase;
 
 	@PostMapping
-	public void criar(@RequestBody CriarMassasDto criarMassas) {
-		
-		
-		System.out.println(criarMassas.getMassasDto());
+	public ResponseEntity<Object> criar(@RequestBody CriarMassasDto criarMassas) {
+		criarMassasUserCase.executa(criarMassas.getMassasDto().toMassasInputDtos());
+		return ResponseEntity.status(HttpStatus.CREATED).body(null);
 	}
 }

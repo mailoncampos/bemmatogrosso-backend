@@ -1,15 +1,19 @@
 package br.com.bemmatogrosso.domain.model.cardapio.massas;
 
-import java.time.LocalTime;
+import java.math.BigDecimal;
+import java.time.Duration;
 import java.util.List;
 
+import br.com.bemmatogrosso.domain.exceptions.CardapioExceptions;
+import br.com.bemmatogrosso.domain.exceptions.MassasExceptionsMessage;
+import br.com.bemmatogrosso.domain.model.cardapio.vo.Nome;
 import br.com.bemmatogrosso.domain.model.cardapio.vo.TempoPreparo;
 import lombok.Getter;
 
 @Getter
 public class Massas {
 	
-	private String nome;
+	private Nome nome;
 	
 	private TempoPreparo tempoDePreparo;
 	
@@ -21,13 +25,14 @@ public class Massas {
 	
 	private List<Massa> massas;
 	
-	private double preco;
+	private BigDecimal preco;
 	
-	public Massas(String nome, LocalTime tempoDePreparo, List<Molho> molhos, List<Tempero> temperos,
-			List<Adicional> adicionais, List<Massa> massas, double preco) {
+	public Massas(String nome, Duration tempoDePreparo, List<Molho> molhos, List<Tempero> temperos,
+			List<Adicional> adicionais, List<Massa> massas, BigDecimal preco) {
 		super();
-		this.nome = nome;
+		this.nome = new Nome(nome);
 		this.tempoDePreparo = new TempoPreparo(tempoDePreparo);
+		
 		this.molhos = molhos;
 		this.temperos = temperos;
 		this.adicionais = adicionais;
@@ -36,9 +41,15 @@ public class Massas {
 	}
 	
 	
-	public Massas adicionar() {
-			
-		return this;
+	public void adicionar(Massa massa) {
+		if(massa == null) {
+			throw new CardapioExceptions(MassasExceptionsMessage.ADICIONAR_MASSA_NULA);
+		}
+		this.massas.add(massa);
+	}
+	
+	public void adicionarMassa() {
+		
 	}
 
 	

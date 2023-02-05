@@ -1,6 +1,6 @@
 package br.com.bemmatogrosso.domain.shared.repository;
 
-public interface Repository {
+public interface RepositoryBemMatoGrosso {
 	
 	public void criar(Object object);
 	

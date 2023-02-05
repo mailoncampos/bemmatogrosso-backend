@@ -1,14 +1,15 @@
 package br.com.bemmatogrosso.domain.model.cardapio.massas;
 
-import lombok.AllArgsConstructor;
+import br.com.bemmatogrosso.domain.model.cardapio.vo.Nome;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 
-@AllArgsConstructor
-@NoArgsConstructor
 @Getter
 public class Massa {
 
-	private String nome;
+	private Nome nome;
+	
+	public Massa(String nome) {
+		this.nome = new Nome(nome);
+	}
 
 }

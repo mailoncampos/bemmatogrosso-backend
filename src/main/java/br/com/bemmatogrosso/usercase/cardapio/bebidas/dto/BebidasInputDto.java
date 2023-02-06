@@ -1,9 +1,7 @@
-package br.com.bemmatogrosso.usercase.cardapio.bebidas;
+package br.com.bemmatogrosso.usercase.cardapio.bebidas.dto;
 
 import java.math.BigDecimal;
 
-import br.com.bemmatogrosso.usercase.cardapio.bebidas.dto.CategoriaInputDto;
-import br.com.bemmatogrosso.usercase.cardapio.bebidas.dto.TipoInputDto;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 

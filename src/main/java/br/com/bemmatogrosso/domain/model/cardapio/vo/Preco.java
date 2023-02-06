@@ -4,7 +4,9 @@ import java.math.BigDecimal;
 
 import br.com.bemmatogrosso.domain.exceptions.CardapioExceptions;
 import br.com.bemmatogrosso.domain.exceptions.PrecoExceptionsMessage;
+import lombok.Getter;
 
+@Getter
 public class Preco {
 
 	private BigDecimal preco;

@@ -1,4 +1,4 @@
-package br.com.bemmatogrosso.infra.repository.cardapio.jpa.model;
+package br.com.bemmatogrosso.infra.repository.cardapio.jpa.model.massas;
 
 import java.util.ArrayList;
 import java.util.List;

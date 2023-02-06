@@ -1,4 +1,4 @@
-package br.com.bemmatogrosso.infra.repository.cardapio.jpa.model;
+package br.com.bemmatogrosso.infra.repository.cardapio.jpa.model.massas;
 
 import java.math.BigDecimal;
 import java.time.Duration;

@@ -3,19 +3,19 @@ package br.com.bemmatogrosso.infra.repository.cardapio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import br.com.bemmatogrosso.domain.model.cardapio.massas.MassasRespository;
-import br.com.bemmatogrosso.infra.repository.cardapio.jpa.MassasJpaRepository;
-import br.com.bemmatogrosso.infra.repository.cardapio.jpa.model.massas.MassasModel;
+import br.com.bemmatogrosso.domain.model.cardapio.bebidas.BebidasRepository;
+import br.com.bemmatogrosso.infra.repository.cardapio.jpa.BebidasJpaRepository;
+import br.com.bemmatogrosso.infra.repository.cardapio.jpa.model.bebidas.BebidasModel;
 
 @Component
-public class MassasJpaRepositoryImpl implements MassasRespository{
+public class BedidasJpaRepositoryImpl implements BebidasRepository{
 	
 	@Autowired
-	private MassasJpaRepository massasJpaRepository;
+	private BebidasJpaRepository bebidasJpaRepository;
 
 	@Override
 	public void criar(Object object) {
-		this.massasJpaRepository.save(new MassasModel(object));
+		this.bebidasJpaRepository.save(new BebidasModel(object));
 	}
 
 	@Override

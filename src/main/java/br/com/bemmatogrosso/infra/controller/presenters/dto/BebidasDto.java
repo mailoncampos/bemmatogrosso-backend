@@ -2,7 +2,7 @@ package br.com.bemmatogrosso.infra.controller.presenters.dto;
 
 import java.math.BigDecimal;
 
-import br.com.bemmatogrosso.usercase.cardapio.bebidas.BebidasInputDto;
+import br.com.bemmatogrosso.usercase.cardapio.bebidas.dto.BebidasInputDto;
 import br.com.bemmatogrosso.usercase.cardapio.bebidas.dto.CategoriaInputDto;
 import br.com.bemmatogrosso.usercase.cardapio.bebidas.dto.TipoInputDto;
 import lombok.AllArgsConstructor;
@@ -18,14 +18,14 @@ public class BebidasDto {
 
 	private BigDecimal preco;
 
-	private TipoDto tipoDto;
+	private TipoDto tipo;
 
-	private CategoriaDto categoriaDto;
+	private CategoriaDto categoria;
 
 	public BebidasInputDto toBebidasInputDto() {
 
 		BebidasInputDto bebidasInputDto = new BebidasInputDto(nome, preco,
-				new CategoriaInputDto(this.categoriaDto.getNome()), new TipoInputDto(this.tipoDto.getNome()));
+				new CategoriaInputDto(this.categoria.getNome()), new TipoInputDto(this.tipo.getNome()));
 		
 		return bebidasInputDto;
 

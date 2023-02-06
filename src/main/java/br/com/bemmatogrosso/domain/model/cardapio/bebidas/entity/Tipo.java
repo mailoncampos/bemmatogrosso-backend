@@ -3,8 +3,10 @@ package br.com.bemmatogrosso.domain.model.cardapio.bebidas.entity;
 import br.com.bemmatogrosso.domain.exceptions.BebidasExceptionsMessage;
 import br.com.bemmatogrosso.domain.exceptions.CardapioExceptions;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @Getter
+@NoArgsConstructor
 public class Tipo {
 
 	private String tipo;

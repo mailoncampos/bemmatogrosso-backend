@@ -1,4 +1,6 @@
-package br.com.bemmatogrosso.domain.model.cardapio.bebidas;
+package br.com.bemmatogrosso.domain.model.cardapio.bebidas.entity;
+
+import java.math.BigDecimal;
 
 import br.com.bemmatogrosso.domain.model.cardapio.vo.Nome;
 import br.com.bemmatogrosso.domain.model.cardapio.vo.Preco;
@@ -23,6 +25,10 @@ public class Bebida {
 		this.categoria = categoria;
 		this.preco = preco;
 		this.tipo = tipo;
+	}
+	
+	public adicionar(String nome, BigDecimal preco) {
+		
 	}
 	
 	

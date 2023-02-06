@@ -3,7 +3,7 @@ package br.com.bemmatogrosso.infra.repository.cardapio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import br.com.bemmatogrosso.domain.model.cardapio.bebidas.BebidasRepository;
+import br.com.bemmatogrosso.domain.model.cardapio.bebidas.repository.BebidasRepository;
 import br.com.bemmatogrosso.infra.repository.cardapio.jpa.BebidasJpaRepository;
 import br.com.bemmatogrosso.infra.repository.cardapio.jpa.model.bebidas.BebidasModel;
 

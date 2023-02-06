@@ -2,7 +2,7 @@ package br.com.bemmatogrosso.infra.repository.cardapio.jpa.model.bebidas;
 
 import java.math.BigDecimal;
 
-import br.com.bemmatogrosso.domain.model.cardapio.bebidas.Bebida;
+import br.com.bemmatogrosso.domain.model.cardapio.bebidas.entity.Bebida;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

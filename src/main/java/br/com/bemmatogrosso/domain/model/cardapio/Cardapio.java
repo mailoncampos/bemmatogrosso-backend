@@ -2,7 +2,7 @@ package br.com.bemmatogrosso.domain.model.cardapio;
 
 import java.util.List;
 
-import br.com.bemmatogrosso.domain.model.cardapio.bebidas.Bebida;
+import br.com.bemmatogrosso.domain.model.cardapio.bebidas.entity.Bebida;
 import br.com.bemmatogrosso.domain.model.cardapio.massas.Massas;
 import br.com.bemmatogrosso.domain.model.cardapio.outros.Outros;
 import br.com.bemmatogrosso.domain.model.cardapio.petisco.Petisco;

@@ -3,10 +3,10 @@ package br.com.bemmatogrosso.usercase.cardapio.bebidas;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import br.com.bemmatogrosso.domain.model.cardapio.bebidas.Bebida;
-import br.com.bemmatogrosso.domain.model.cardapio.bebidas.BebidasRepository;
-import br.com.bemmatogrosso.domain.model.cardapio.bebidas.Categoria;
-import br.com.bemmatogrosso.domain.model.cardapio.bebidas.Tipo;
+import br.com.bemmatogrosso.domain.model.cardapio.bebidas.entity.Bebida;
+import br.com.bemmatogrosso.domain.model.cardapio.bebidas.entity.Categoria;
+import br.com.bemmatogrosso.domain.model.cardapio.bebidas.entity.Tipo;
+import br.com.bemmatogrosso.domain.model.cardapio.bebidas.repository.BebidasRepository;
 import br.com.bemmatogrosso.domain.model.cardapio.vo.Preco;
 import br.com.bemmatogrosso.usercase.cardapio.bebidas.dto.BebidasInputDto;
 import br.com.bemmatogrosso.usercase.cardapio.bebidas.dto.BebidasOutupDto;

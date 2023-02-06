@@ -11,10 +11,6 @@ public class Tipo {
 
 	private String descricaoTipo;
 
-	private Tipo(String tipo) {
-		this.tipo = tipo;
-	}
-
 	public Tipo criar(String tipo, String descricao) {
 		this.verificaTipoIsNotNull(tipo).verificaDescricaoTipoIsNotNull(descricao);
 		return this;
@@ -29,7 +25,7 @@ public class Tipo {
 	}
 
 	private Tipo verificaDescricaoTipoIsNotNull(String descricao) {
-		if (tipo == null) {
+		if (descricao == null) {
 			throw new CardapioExceptions(BebidasExceptionsMessage.DESCRICAO_TIPO_NULO);
 		}
 		this.setTipo(tipo);

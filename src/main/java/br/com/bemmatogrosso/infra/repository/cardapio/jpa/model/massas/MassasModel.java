@@ -68,7 +68,7 @@ public class MassasModel {
 		
 		Massas massas =(Massas)object;
 		
-		this.preco = massas.getPreco();
+		this.preco = massas.getPreco().getPreco();
 		this.nome = massas.getNome().getNome();
 		this.timePreparo = massas.getTempoDePreparo().getTempoDePreparo();
 		this.molhos = new MolhoModel().criarListaDeMolhoModel(massas.getMolhos());

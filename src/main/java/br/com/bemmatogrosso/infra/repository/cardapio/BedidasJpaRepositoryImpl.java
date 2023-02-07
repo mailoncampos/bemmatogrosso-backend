@@ -33,12 +33,6 @@ public class BedidasJpaRepositoryImpl implements BebidasRepository{
 	}
 
 	@Override
-	public void buscarPorId(Long id) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
 	public void adicionarTipo(Tipo tipo) {
 		// TODO Auto-generated method stub
 		
@@ -48,6 +42,12 @@ public class BedidasJpaRepositoryImpl implements BebidasRepository{
 	public void adicionarCategoria(Categoria categoria) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public <T> T buscarPorId(Long id) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

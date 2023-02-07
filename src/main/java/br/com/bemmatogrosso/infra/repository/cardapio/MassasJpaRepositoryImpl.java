@@ -31,9 +31,9 @@ public class MassasJpaRepositoryImpl implements MassasRespository{
 	}
 
 	@Override
-	public void buscarPorId(Long id) {
+	public <T> T buscarPorId(Long id) {
 		// TODO Auto-generated method stub
-		
+		return null;
 	}
 
 }

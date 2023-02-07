@@ -2,12 +2,12 @@ package br.com.bemmatogrosso.domain.shared.repository;
 
 public interface RepositoryBemMatoGrosso {
 	
-	public void criar(Object object);
+	public <T> void criar(T object);
 	
-	public void editar(Object object);
+	public <T> void editar(T object);
 	
 	public void excluir(Long id);
 	
-	public void buscarPorId(Long id);
+	public <T> T buscarPorId(Long id);
 		
 }

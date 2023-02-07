@@ -10,5 +10,7 @@ import lombok.NoArgsConstructor;
 public class CategoriaDto {
 	
 	private String nome;
+	
+	private String descricao;
 
 }

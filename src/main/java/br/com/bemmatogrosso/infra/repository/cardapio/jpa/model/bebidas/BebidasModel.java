@@ -45,10 +45,10 @@ public class BebidasModel {
 
 		Bebida bebida = (Bebida) object;
 
-		this.nome = bebida.getNome().getNome();
-		this.preco = bebida.getPreco().getPreco();
-		this.categoria = new CategoriaModel(null, bebida.getCategoria().getNome().getNome());
-		this.tipo = new TipoModel(null, bebida.getTipo().getNome().getNome());
+		this.nome = bebida.getNome();
+		this.preco = bebida.getPreco();
+		this.categoria = new CategoriaModel(null, bebida.getCategoria(), bebida.getDescricaoCategoria());
+		this.tipo = new TipoModel(null, bebida.getTipo(), bebida.getDescricaoTipo());
 
 	}
 

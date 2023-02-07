@@ -23,5 +23,8 @@ public class CategoriaModel {
 
 	@Column(name = "nome", nullable = false)
 	private String nome;
+	
+	@Column(name = "descricao", nullable = false)
+	private String descricao;
 
 }

@@ -30,12 +30,16 @@ public class Tipo {
 		if (descricao == null) {
 			throw new CardapioExceptions(BebidasExceptionsMessage.DESCRICAO_TIPO_NULO);
 		}
-		this.setTipo(tipo);
+		this.setDescricaoTipo(descricao);
 		return this;
 	}
 
 	private void setTipo(String tipo) {
 		this.tipo = tipo;
+	}
+	
+	private void setDescricaoTipo(String descricao) {
+		this.descricaoTipo = descricao;
 	}
 
 }

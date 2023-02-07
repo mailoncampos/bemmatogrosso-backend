@@ -25,8 +25,9 @@ public class BebidasDto {
 	public BebidasInputDto toBebidasInputDto() {
 
 		BebidasInputDto bebidasInputDto = new BebidasInputDto(nome, preco,
-				new CategoriaInputDto(this.categoria.getNome()), new TipoInputDto(this.tipo.getNome()));
-		
+				new CategoriaInputDto(this.categoria.getNome(), this.categoria.getDescricao()),
+				new TipoInputDto(this.tipo.getNome(), this.tipo.getDescricao()));
+
 		return bebidasInputDto;
 
 	}

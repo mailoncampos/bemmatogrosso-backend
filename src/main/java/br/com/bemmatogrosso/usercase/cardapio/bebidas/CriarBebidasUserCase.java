@@ -4,10 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.com.bemmatogrosso.domain.model.cardapio.bebidas.entity.Bebida;
-import br.com.bemmatogrosso.domain.model.cardapio.bebidas.entity.Categoria;
-import br.com.bemmatogrosso.domain.model.cardapio.bebidas.entity.Tipo;
+import br.com.bemmatogrosso.domain.model.cardapio.bebidas.entity.BebidaBuilder;
 import br.com.bemmatogrosso.domain.model.cardapio.bebidas.repository.BebidasRepository;
-import br.com.bemmatogrosso.domain.model.cardapio.vo.Preco;
 import br.com.bemmatogrosso.usercase.cardapio.bebidas.dto.BebidasInputDto;
 import br.com.bemmatogrosso.usercase.cardapio.bebidas.dto.BebidasOutupDto;
 import br.com.bemmatogrosso.usercase.cardapio.bebidas.dto.CategoriaOutputDto;
@@ -21,8 +19,12 @@ public class CriarBebidasUserCase {
 
 	public BebidasOutupDto executa(BebidasInputDto bebidasInputDto) {
 
-		Bebida bebida = new Bebida(bebidasInputDto.getNome(), new Categoria(bebidasInputDto.getCateoriaDto().getNome()),
-				new Preco(bebidasInputDto.getPreco()), new Tipo(bebidasInputDto.getTipoDto().getNome()));
+		Bebida bebida = new BebidaBuilder()
+				.comNome(bebidasInputDto.getNome())
+				.comPreco(null)
+				.comCategoria(bebidasInputDto.getCateoriaDto().getNome(), bebidasInputDto.getCateoriaDto().getDescricao())
+				.comTipo(bebidasInputDto.getTipoDto().getNome(), bebidasInputDto.getTipoDto().getDescricao())
+				.build();
 
 		this.bebidasRepository.criar(bebida);
 

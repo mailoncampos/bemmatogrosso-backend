@@ -8,5 +8,7 @@ import lombok.Getter;
 public class TipoInputDto {
 	
 	private String nome;
+	
+	private String descricao;
 
 }

@@ -11,4 +11,6 @@ public class TipoDto {
 
 	private String nome;
 	
+	private String descricao;
+	
 }

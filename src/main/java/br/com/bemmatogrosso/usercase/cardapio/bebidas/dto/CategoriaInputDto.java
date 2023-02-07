@@ -9,4 +9,6 @@ public class CategoriaInputDto {
 	
 	private String nome;
 
+	private String descricao;
+
 }

@@ -4,10 +4,8 @@ import java.math.BigDecimal;
 import java.time.Duration;
 import java.util.List;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 
-@AllArgsConstructor
 @Getter
 public class MassasInputDto {
 	
@@ -24,5 +22,12 @@ public class MassasInputDto {
 	private List<String> nomesAdicionais;
 	
 	private List<String> nomesMassas;
+	
+	public MassasInputDto criarMassas(String nome, Duration tempoDePreparo ,BigDecimal preco) {
+		this.nome = nome;
+		this.tempoDePreparo = tempoDePreparo;
+		this.preco = preco;
+		return this;
+	}
 
 }

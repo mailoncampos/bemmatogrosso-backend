@@ -20,7 +20,7 @@ public class CriarMassasRestController {
 
 	@PostMapping
 	public ResponseEntity<Object> criar(@RequestBody CriarMassasDto criarMassas) {
-		criarMassasUserCase.executa(criarMassas.getMassasDto().toMassasInputDtos());
+		criarMassasUserCase.executa(criarMassas.toMassasInputDtos());
 		return ResponseEntity.status(HttpStatus.CREATED).body(null);
 	}
 }

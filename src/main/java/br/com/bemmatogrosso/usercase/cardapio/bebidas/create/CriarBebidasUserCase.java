@@ -21,7 +21,7 @@ public class CriarBebidasUserCase {
 
 		Bebida bebida = new BebidaBuilder()
 				.comNome(bebidasInputDto.getNome())
-				.comPreco(null)
+				.comPreco(bebidasInputDto.getPreco())
 				.comCategoria(bebidasInputDto.getCateoriaDto().getNome(), bebidasInputDto.getCateoriaDto().getDescricao())
 				.comTipo(bebidasInputDto.getTipoDto().getNome(), bebidasInputDto.getTipoDto().getDescricao())
 				.build();

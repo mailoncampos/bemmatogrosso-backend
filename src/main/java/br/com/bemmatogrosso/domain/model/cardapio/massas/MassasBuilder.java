@@ -1,5 +1,7 @@
 package br.com.bemmatogrosso.domain.model.cardapio.massas;
 
+import java.math.BigDecimal;
+import java.time.Duration;
 import java.util.List;
 
 import br.com.bemmatogrosso.domain.model.cardapio.vo.Nome;
@@ -16,13 +18,13 @@ public class MassasBuilder {
     protected List<Massa> massas;
     protected Preco preco;
 
-    public MassasBuilder comNome(Nome nome) {
-      this.nome = nome;
+    public MassasBuilder comNome(String nome) {
+      this.nome = new Nome(nome);
       return this;
     }
 
-    public MassasBuilder comTempoDePreparo(TempoPreparo tempoDePreparo) {
-      this.tempoDePreparo = tempoDePreparo;
+    public MassasBuilder comTempoDePreparo(Duration tempoDePreparo) {
+      this.tempoDePreparo = new TempoPreparo(tempoDePreparo);
       return this;
     }
 
@@ -46,8 +48,8 @@ public class MassasBuilder {
       return this;
     }
 
-    public MassasBuilder comPreco(Preco preco) {
-      this.preco = preco;
+    public MassasBuilder comPreco(BigDecimal preco) {
+      this.preco = new Preco(preco);
       return this;
     }
 

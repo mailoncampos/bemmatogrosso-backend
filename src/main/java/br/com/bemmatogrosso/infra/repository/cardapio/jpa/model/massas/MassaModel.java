@@ -28,11 +28,14 @@ public class MassaModel {
 	@Column(name = "nome", nullable = false)
 	private String nome;
 	
+	@Column(name = "descricao", nullable = false)
+	private String descricao;
+	
 	public List<MassaModel> criarListaDeMassaModel(List<Massa> massas){
     	
     	List<MassaModel> massaModel = new ArrayList<>();
     	
-    	massas.stream().forEach((massa) -> massaModel.add(new MassaModel(null, massa.getNome().getNome())));
+    	massas.stream().forEach((massa) -> massaModel.add(new MassaModel(null, massa.getMassa(), massa.getDescricaoMassa())));
     	
     	return massaModel;
     }

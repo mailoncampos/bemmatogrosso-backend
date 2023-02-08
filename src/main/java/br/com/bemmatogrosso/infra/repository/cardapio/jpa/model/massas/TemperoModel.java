@@ -28,11 +28,14 @@ public class TemperoModel {
 	@Column(name = "nome", nullable = false)
 	private String nome;
 	
+	@Column(name = "descricao", nullable = false)
+	private String descricao;
+	
 	public List<TemperoModel> criarListaDeTemperoModel(List<Tempero> temperos){
     	
     	List<TemperoModel> temperoModel = new ArrayList<>();
     	
-    	temperos.stream().forEach((tempero) -> temperoModel.add(new TemperoModel(null, tempero.getNome().getNome())));
+    	temperos.stream().forEach((tempero) -> temperoModel.add(new TemperoModel(null, tempero.getTempero(), tempero.getDescricaoTempero())));
     	
     	return temperoModel;
     }

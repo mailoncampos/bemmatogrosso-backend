@@ -28,11 +28,14 @@ public class AdicionalModel {
 	@Column(name = "nome", nullable = false)
 	private String nome;
 	
+	@Column(name = "descricao", nullable = false)
+	private String descricao;
+	
 	public List<AdicionalModel> criarListaDeAdicionalModel(List<Adicional> adicionais){
     	
     	List<AdicionalModel> adicionaisModel = new ArrayList<>();
     	
-    	adicionais.stream().forEach((adicional) -> adicionaisModel.add(new AdicionalModel(null, adicional.getNome().getNome())));
+    	adicionais.stream().forEach((adicional) -> adicionaisModel.add(new AdicionalModel(null, adicional.getAdicional(), adicional.getDescricaoAdicional())));
     	
     	return adicionaisModel;
     }

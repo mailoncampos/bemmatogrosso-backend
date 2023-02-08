@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.bemmatogrosso.infra.controller.presenters.request.CriarBebidaDto;
-import br.com.bemmatogrosso.usercase.cardapio.bebidas.CriarBebidasUserCase;
+import br.com.bemmatogrosso.usercase.cardapio.bebidas.create.CriarBebidasUserCase;
 
 @RestController
 @RequestMapping("/bebidas")

@@ -28,12 +28,15 @@ public class MolhoModel {
     @Column(name = "nome", nullable = false)
     private String nome;
     
+    @Column(name = "descricao", nullable = false)
+	private String descricao;
+    
     
     public List<MolhoModel> criarListaDeMolhoModel(List<Molho> molhos){
     	
     	List<MolhoModel> molhosModel = new ArrayList<>();
     	
-    	molhos.stream().forEach((molho) -> molhosModel.add(new MolhoModel(null, molho.getNome().getNome())));
+    	molhos.stream().forEach((molho) -> molhosModel.add(new MolhoModel(null, molho.getMolho(), molho.getDescricaoMolho())));
     	
     	return molhosModel;
     }

@@ -1,4 +1,4 @@
-package br.com.bemmatogrosso.usercase.cardapio.bebidas;
+package br.com.bemmatogrosso.usercase.cardapio.bebidas.create;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

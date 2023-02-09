@@ -33,11 +33,11 @@ public class BebidasModel {
 	@Column(name = "preco", nullable = false)
 	private BigDecimal preco;
 
-	@ManyToOne(cascade = CascadeType.PERSIST)
+	@ManyToOne(cascade = CascadeType.DETACH)
 	@JoinColumn(name = "categoria_id")
 	private CategoriaModel categoria;
 
-	@ManyToOne(cascade = CascadeType.PERSIST)
+	@ManyToOne(cascade = CascadeType.DETACH)
 	@JoinColumn(name = "tipo_id")
 	private TipoModel tipo;
 

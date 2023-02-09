@@ -9,4 +9,9 @@ public interface BebidasRepository extends RepositoryBemMatoGrosso{
 	void adicionarTipo(Tipo tipo);
 	
 	void adicionarCategoria(Categoria categoria);
+	
+	Tipo buscaTipo(String tipo);
+	
+	Categoria buscarCategoria(String categoria);
+		
 }

@@ -50,4 +50,15 @@ public class BedidasJpaRepositoryImpl implements BebidasRepository{
 		return null;
 	}
 
+	@Override
+	public Tipo buscaTipo(String tipo) {
+		return null;
+	}
+
+	@Override
+	public Categoria buscarCategoria(String categoria) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

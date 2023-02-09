@@ -13,8 +13,8 @@ public class BebidasInputDto {
 
 	private BigDecimal preco;
 
-	private CategoriaInputDto cateoriaDto;
+	private String categoria;
 
-	private TipoInputDto tipoDto;
+	private String tipo;
 
 }

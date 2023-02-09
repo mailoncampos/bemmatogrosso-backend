@@ -2,13 +2,15 @@ package br.com.bemmatogrosso.domain.model.cardapio.bebidas.entity;
 
 import java.math.BigDecimal;
 
+import br.com.bemmatogrosso.domain.exceptions.BebidasExceptionsMessage;
+import br.com.bemmatogrosso.domain.exceptions.CardapioExceptions;
 import br.com.bemmatogrosso.domain.model.cardapio.vo.Nome;
 import br.com.bemmatogrosso.domain.model.cardapio.vo.Preco;
 import lombok.Getter;
 
 @Getter
 public class BebidaBuilder {
-	
+
 	private Nome nome;
 
 	private Categoria categoria;
@@ -18,22 +20,28 @@ public class BebidaBuilder {
 	private Tipo tipo;
 
 	public BebidaBuilder comNome(String nome) {
-		this.nome =new Nome(nome);
+		this.nome = new Nome(nome);
 		return this;
 	}
 
 	public BebidaBuilder comPreco(BigDecimal preco) {
-		this.preco =new Preco(preco);
+		this.preco = new Preco(preco);
 		return this;
 	}
 
-	public BebidaBuilder comTipo(String tipo, String descricao) {
-		this.tipo = new Tipo().criar(tipo, descricao);
+	public BebidaBuilder comTipo(Tipo tipo) {
+		if (tipo == null) {
+			throw new CardapioExceptions(BebidasExceptionsMessage.TIPO_NULO);
+		}
+		this.tipo = tipo;
 		return this;
 	}
 
-	public BebidaBuilder comCategoria(String categoria, String descricao) {
-		this.categoria = new Categoria().criar(categoria, descricao);
+	public BebidaBuilder comCategoria(Categoria categoria) {
+		if (categoria == null) {
+			throw new CardapioExceptions(BebidasExceptionsMessage.CATEGORIA_NULA);
+		}
+		this.categoria = categoria;
 		return this;
 	}
 

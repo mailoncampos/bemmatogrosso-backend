@@ -12,9 +12,7 @@ public class Preco {
 	private BigDecimal preco;
 
 	public Preco(BigDecimal preco) {	
-		
 		this.precoDiferenteNull(preco).verificaPrecoNegativo();
-		
 	}
 
 	private Preco precoDiferenteNull(BigDecimal preco) {

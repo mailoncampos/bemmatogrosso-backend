@@ -1,4 +1,4 @@
-package br.com.bemmatogrosso.domain.model.cardapio.porcoes;
+package br.com.bemmatogrosso.domain.model.cardapio.porcoes.entity;
 
 import lombok.Getter;
 

@@ -6,7 +6,7 @@ import br.com.bemmatogrosso.domain.model.cardapio.bebidas.entity.Bebida;
 import br.com.bemmatogrosso.domain.model.cardapio.massas.Massas;
 import br.com.bemmatogrosso.domain.model.cardapio.outros.Outros;
 import br.com.bemmatogrosso.domain.model.cardapio.petisco.Petisco;
-import br.com.bemmatogrosso.domain.model.cardapio.porcoes.Porcoes;
+import br.com.bemmatogrosso.domain.model.cardapio.porcoes.entity.Porcoes;
 import br.com.bemmatogrosso.domain.model.cardapio.pratosexecutivos.PratosExecutivos;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

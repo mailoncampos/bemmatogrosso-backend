@@ -1,10 +1,9 @@
-package br.com.bemmatogrosso.domain.model.cardapio.porcoes;
+package br.com.bemmatogrosso.domain.model.cardapio.porcoes.entity;
 
 import java.math.BigDecimal;
 import java.time.Duration;
 import java.util.List;
 
-import br.com.bemmatogrosso.domain.exceptions.BebidasExceptionsMessage;
 import br.com.bemmatogrosso.domain.exceptions.CardapioExceptions;
 import br.com.bemmatogrosso.domain.exceptions.PorcoesExceptionsMessage;
 import br.com.bemmatogrosso.domain.model.cardapio.vo.Nome;

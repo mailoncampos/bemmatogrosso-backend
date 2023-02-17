@@ -1,5 +1,6 @@
 package br.com.bemmatogrosso.usercase.cardapio.bebidas.dto;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -15,6 +16,10 @@ public class InformacesCadastroBebidasOutputDto {
 	private Map<String, String> categoriaBebida;
 
 	public InformacesCadastroBebidasOutputDto(List<Tipo> tipos, List<Categoria> categorias) {
+		
+		this.tipoBebida = new HashMap<>();
+		this.categoriaBebida = new HashMap<>();
+		
 		tipos.stream().forEach((tipo) -> {
 			this.tipoBebida.put(tipo.getTipo(), tipo.getDescricaoTipo());
 		});

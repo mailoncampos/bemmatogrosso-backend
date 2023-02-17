@@ -14,12 +14,19 @@ public class Bebida {
 	private Preco preco;
 
 	private Tipo tipo;
+	
+    private byte[] imagem;
 
 	protected Bebida(BebidaBuilder builder) {
 		this.nome = builder.getNome();
 		this.preco = builder.getPreco();
 		this.tipo = builder.getTipo();
 		this.categoria = builder.getCategoria();
+		this.imagem = builder.getImagem();
+	}
+	
+	public byte[] getImagem() {
+		return this.imagem;
 	}
 	
 	public String getNome() {

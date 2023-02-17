@@ -10,6 +10,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.Lob;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -40,6 +41,10 @@ public class BebidasModel {
 	@ManyToOne(cascade = CascadeType.DETACH)
 	@JoinColumn(name = "tipo_id")
 	private TipoModel tipo;
+	
+	@Lob
+    @Column(name = "imagem")
+    private byte[] imagem;
 
 	public BebidasModel(Object object) {
 
@@ -49,6 +54,7 @@ public class BebidasModel {
 		this.preco = bebida.getPreco();
 		this.categoria = new CategoriaModel(null, bebida.getCategoria(), bebida.getDescricaoCategoria());
 		this.tipo = new TipoModel(null, bebida.getTipo(), bebida.getDescricaoTipo());
+		this.imagem = bebida.getImagem();
 
 	}
 

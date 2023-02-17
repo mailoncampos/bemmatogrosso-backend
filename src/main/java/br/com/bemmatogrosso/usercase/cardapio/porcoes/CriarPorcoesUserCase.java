@@ -1,6 +1,5 @@
 package br.com.bemmatogrosso.usercase.cardapio.porcoes;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.com.bemmatogrosso.domain.model.cardapio.porcoes.entity.Porcoes;

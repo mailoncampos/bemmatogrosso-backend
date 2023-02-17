@@ -1,6 +1,7 @@
 package br.com.bemmatogrosso.domain.model.cardapio.bebidas.entity;
 
 import java.math.BigDecimal;
+import java.util.Base64;
 
 import br.com.bemmatogrosso.domain.exceptions.BebidasExceptionsMessage;
 import br.com.bemmatogrosso.domain.exceptions.CardapioExceptions;
@@ -18,9 +19,16 @@ public class BebidaBuilder {
 	private Preco preco;
 
 	private Tipo tipo;
+	
+	private byte[] imagem;
 
 	public BebidaBuilder comNome(String nome) {
 		this.nome = new Nome(nome);
+		return this;
+	}
+	
+	public BebidaBuilder comImagem(String imagemBase64) {
+		this.imagem = Base64.getDecoder().decode(imagemBase64);
 		return this;
 	}
 

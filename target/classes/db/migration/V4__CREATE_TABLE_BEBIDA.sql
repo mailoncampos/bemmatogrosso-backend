@@ -8,5 +8,6 @@ CREATE TABLE
         nome VARCHAR(255) NOT NULL,
         categoria_id INTEGER REFERENCES categoria(id),
         preco NUMERIC NOT NULL,
-        tipo_id INTEGER REFERENCES tipo(id)
+        tipo_id INTEGER REFERENCES tipo(id),
+        imagem BYTEA
     );
